@@ -1,0 +1,98 @@
+
+> accounting-backend@1.0.0 start:dev /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend
+> nest start --watch
+
+c[[90m6:17:50 PM[0m] Starting compilation in watch mode...
+
+[96msrc/modules/auth/auth.controller.ts[0m:[93m4[0m:[93m76[0m - [91merror[0m[90m TS2307: [0mCannot find module './dto' or its corresponding type declarations.
+
+[7m4[0m import { RegisterDto, LoginDto, UpdateProfileDto, ChangePasswordDto } from './dto'
+[7m [0m [91m                                                                           ~~~~~~~[0m
+
+[96msrc/modules/auth/auth.service.ts[0m:[93m5[0m:[93m76[0m - [91merror[0m[90m TS2307: [0mCannot find module './dto' or its corresponding type declarations.
+
+[7m5[0m import { RegisterDto, LoginDto, UpdateProfileDto, ChangePasswordDto } from './dto'
+[7m [0m [91m                                                                           ~~~~~~~[0m
+
+[96msrc/modules/auth/strategies/jwt-auth.guard.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2742: [0mThe inferred type of 'canActivate' cannot be named without a reference to '.pnpm/rxjs@7.8.1/node_modules/rxjs'. This is likely not portable. A type annotation is necessary.
+
+[7m6[0m   canActivate(context: ExecutionContext) {
+[7m [0m [91m  ~~~~~~~~~~~[0m
+
+[96msrc/modules/budget/budget.controller.ts[0m:[93m4[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './dto' or its corresponding type declarations.
+
+[7m4[0m import { CreateBudgetDto } from './dto'
+[7m [0m [91m                                ~~~~~~~[0m
+
+[96msrc/modules/budget/budget.service.ts[0m:[93m4[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './dto' or its corresponding type declarations.
+
+[7m4[0m import { CreateBudgetDto } from './dto'
+[7m [0m [91m                                ~~~~~~~[0m
+
+[96msrc/modules/categories/categories.controller.ts[0m:[93m4[0m:[93m54[0m - [91merror[0m[90m TS2307: [0mCannot find module './dto' or its corresponding type declarations.
+
+[7m4[0m import { CreateCategoryDto, UpdateCategoryDto } from './dto'
+[7m [0m [91m                                                     ~~~~~~~[0m
+
+[96msrc/modules/categories/categories.service.ts[0m:[93m3[0m:[93m54[0m - [91merror[0m[90m TS2307: [0mCannot find module './dto' or its corresponding type declarations.
+
+[7m3[0m import { CreateCategoryDto, UpdateCategoryDto } from './dto'
+[7m [0m [91m                                                     ~~~~~~~[0m
+
+[96msrc/modules/records/records.controller.ts[0m:[93m4[0m:[93m66[0m - [91merror[0m[90m TS2307: [0mCannot find module './dto' or its corresponding type declarations.
+
+[7m4[0m import { CreateRecordDto, UpdateRecordDto, QueryRecordDto } from './dto'
+[7m [0m [91m                                                                 ~~~~~~~[0m
+
+[96msrc/modules/records/records.service.ts[0m:[93m3[0m:[93m66[0m - [91merror[0m[90m TS2307: [0mCannot find module './dto' or its corresponding type declarations.
+
+[7m3[0m import { CreateRecordDto, UpdateRecordDto, QueryRecordDto } from './dto'
+[7m [0m [91m                                                                 ~~~~~~~[0m
+
+[[90m6:17:52 PM[0m] Found 9 errors. Watching for file changes.
+
+c[[90m6:18:29 PM[0m] File change detected. Starting incremental compilation...
+
+[[90m6:18:30 PM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:30 PM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:30 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +7ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +424ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPassportModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mUsersModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mRecordsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCategoriesModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mJwtModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBudgetModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAuthModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAuthController {/api/v1/auth}:[39m[38;5;3m +108ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/auth/register, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/auth/login, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/auth/logout, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/auth/profile, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/auth/profile, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/auth/password, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mUsersController {/api/v1/users}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/users/me, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mRecordsController {/api/v1/records}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/records, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/records/statistics, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/records/trend, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/records/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/records, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/records/:id, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/records/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCategoriesController {/api/v1/categories}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/categories, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/categories/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/categories, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/categories/:id, PUT} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/categories/:id, DELETE} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mBudgetController {/api/v1/budgets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/budgets, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/budgets/current, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/budgets, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 4892  - [39m05/25/2026, 6:18:31 PM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/api/v1/budgets/:id, DELETE} route[39m[38;5;3m +0ms[39m

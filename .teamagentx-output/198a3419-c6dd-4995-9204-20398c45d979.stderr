@@ -1,0 +1,11 @@
+[31m[Nest] 6097  - [39m05/25/2026, 6:19:34 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39m[31mdata and salt arguments required[39m
+Error: data and salt arguments required
+    at Object.hash (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/bcrypt@5.1.1/node_modules/bcrypt/bcrypt.js:137:17)
+    at /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/bcrypt@5.1.1/node_modules/bcrypt/promises.js:29:12
+    at new Promise (<anonymous>)
+    at Object.module.exports.promise (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/bcrypt@5.1.1/node_modules/bcrypt/promises.js:20:12)
+    at Object.hash (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/bcrypt@5.1.1/node_modules/bcrypt/bcrypt.js:133:25)
+    at AuthService.register (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/src/modules/auth/auth.service.ts:30:41)
+    at AuthController.register (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/src/modules/auth/auth.controller.ts:12:20)
+    at /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/@nestjs+core@10.0.0_@nestjs+common@10.0.0_@nestjs+platform-express@10.0.0_reflect-metadata@0.1.13_rxjs@7.8.1/node_modules/@nestjs/core/router/router-execution-context.js:46:28
+    at /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/@nestjs+core@10.0.0_@nestjs+common@10.0.0_@nestjs+platform-express@10.0.0_reflect-metadata@0.1.13_rxjs@7.8.1/node_modules/@nestjs/core/router/router-proxy.js:9:17

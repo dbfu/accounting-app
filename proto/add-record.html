@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>记账应用 - 记账</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8faf9;
+      min-height: 100vh;
+    }
+    .navbar {
+      background: #ffffff;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+    .nav-logo-text { font-size: 18px; font-weight: 700; color: #1a1a1a; }
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 69px;
+      bottom: 0;
+      width: 240px;
+      background: #ffffff;
+      border-right: 1px solid #e5e7eb;
+      padding: 24px 16px;
+    }
+    .sidebar-menu { list-style: none; }
+    .sidebar-item { margin-bottom: 8px; }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      color: #6b7280;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .sidebar-link:hover { background: #f0fdf4; color: #22c55e; }
+    .sidebar-link.active { background: linear-gradient(135deg, #22c55e, #16a34a); color: white; }
+    .sidebar-link svg { width: 20px; height: 20px; fill: currentColor; }
+    .main-content { margin-left: 240px; padding: 24px; max-width: 600px; }
+    .page-title { font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 24px; }
+    .add-record-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    /* 类型切换 */
+    .type-switch {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .type-btn {
+      flex: 1;
+      height: 48px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: white;
+      color: #6b7280;
+    }
+    .type-btn.expense.active {
+      border-color: #dc2626;
+      background: #fef2f2;
+      color: #dc2626;
+    }
+    .type-btn.income.active {
+      border-color: #22c55e;
+      background: #f0fdf4;
+      color: #22c55e;
+    }
+    .type-btn:hover { background: #f9fafb; }
+    /* 金额输入 */
+    .amount-section {
+      margin-bottom: 24px;
+    }
+    .amount-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 12px;
+    }
+    .amount-input-wrapper {
+      display: flex;
+      align-items: center;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 0 16px;
+      transition: all 0.2s;
+    }
+    .amount-input-wrapper:focus-within { border-color: #22c55e; }
+    .currency-symbol {
+      font-size: 20px;
+      font-weight: 600;
+      color: #6b7280;
+      margin-right: 8px;
+    }
+    .amount-input {
+      width: 100%;
+      height: 56px;
+      font-size: 28px;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      color: #1a1a1a;
+    }
+    /* 分类选择 */
+    .category-section { margin-bottom: 24px; }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 8px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: white;
+    }
+    .category-item:hover { background: #f9fafb; }
+    .category-item.active {
+      border-color: #22c55e;
+      background: #f0fdf4;
+    }
+    .category-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .category-icon svg { width: 24px; height: 24px; fill: white; }
+    .category-name { font-size: 13px; font-weight: 500; color: #374151; }
+    /* 其他字段 */
+    .form-row { display: flex; gap: 16px; margin-bottom: 24px; }
+    .form-group { flex: 1; }
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 8px;
+    }
+    .form-input {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px;
+      font-size: 15px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      transition: all 0.2s;
+      outline: none;
+    }
+    .form-input:focus { border-color: #22c55e; }
+    .form-textarea {
+      width: 100%;
+      height: 80px;
+      padding: 12px 16px;
+      font-size: 15px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      transition: all 0.2s;
+      outline: none;
+      resize: none;
+    }
+    .form-textarea:focus { border-color: #22c55e; }
+    /* 提交按钮 */
+    .btn-submit {
+      width: 100%;
+      height: 56px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+    }
+    @media (max-width: 768px) {
+      .sidebar { left: -240px; }
+      .main-content { margin-left: 0; padding: 16px; }
+      .category-grid { grid-template-columns: repeat(3, 1fr); }
+      .form-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.10 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/></svg>
+      </div>
+      <span class="nav-logo-text">记账本</span>
+    </div>
+  </nav>
+
+  <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+          <span>首页概览</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="add-record.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          <span>记账</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="bills.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          <span>账单列表</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="categories.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M12 2l-5.5 9h11L12 2zm0 3.84L13.93 9h-3.87L12 5.84zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM3 21.5h8v-8H3v8zm2-6h4v4H5v-4z"/></svg>
+          <span>分类管理</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="statistics.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          <span>数据统计</span>
+        </a>
+      </li>
+      <li class="sidebar-item">
+        <a href="budget.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.61 1.68-3.61 3.69 0 2.35 1.78 3.48 4.37 4.1 2.58.62 3.11 1.57 3.11 2.52 0 .73-.52 1.93-2.7 1.93-2.31 0-3.18-1.1-3.28-2.3H7c.1 2.57 1.72 3.89 3.9 4.35V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.6-4.4z"/></svg>
+          <span>预算管理</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <h1 class="page-title">添加账单</h1>
+    <div class="add-record-card">
+      <!-- 类型切换 -->
+      <div class="type-switch">
+        <button class="type-btn expense active">支出</button>
+        <button class="type-btn income">收入</button>
+      </div>
+
+      <!-- 金额输入 -->
+      <div class="amount-section">
+        <label class="amount-label">金额</label>
+        <div class="amount-input-wrapper">
+          <span class="currency-symbol">¥</span>
+          <input type="number" class="amount-input" placeholder="0.00">
+        </div>
+      </div>
+
+      <!-- 分类选择 -->
+      <div class="category-section">
+        <label class="form-label">分类</label>
+        <div class="category-grid">
+          <div class="category-item active">
+            <div class="category-icon" style="background: #f97316;">
+              <svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7z"/></svg>
+            </div>
+            <span class="category-name">餐饮</span>
+          </div>
+          <div class="category-item">
+            <div class="category-icon" style="background: #3b82f6;">
+              <svg viewBox="0 0 24 24"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 15.43 5.57 17 7.5 17L6 18.5v.5h2.23l2-2H14l2 2h2v-.5L16.5 17c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4z"/></svg>
+            </div>
+            <span class="category-name">交通</span>
+          </div>
+          <div class="category-item">
+            <div class="category-icon" style="background: #a855f7;">
+              <svg viewBox="0 0 24 24"><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7z"/></svg>
+            </div>
+            <span class="category-name">购物</span>
+          </div>
+          <div class="category-item">
+            <div class="category-icon" style="background: #ec4899;">
+              <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V6h3V3h-4z"/></svg>
+            </div>
+            <span class="category-name">娱乐</span>
+          </div>
+          <div class="category-item">
+            <div class="category-icon" style="background: #14b8a6;">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 12 12 12s-3.5-1.57-3.5-3.5S10.07 6 12 6z"/></svg>
+            </div>
+            <span class="category-name">居住</span>
+          </div>
+          <div class="category-item">
+            <div class="category-icon" style="background: #64748b;">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <span class="category-name">医疗</span>
+          </div>
+          <div class="category-item">
+            <div class="category-icon" style="background: #eab308;">
+              <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3z"/></svg>
+            </div>
+            <span class="category-name">教育</span>
+          </div>
+          <div class="category-item">
+            <div class="category-icon" style="background: #71717a;">
+              <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+            </div>
+            <span class="category-name">其他</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 日期和备注 -->
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">日期</label>
+          <input type="date" class="form-input" value="2026-05-25">
+        </div>
+        <div class="form-group">
+          <label class="form-label">时间</label>
+          <input type="time" class="form-input" value="14:30">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">备注</label>
+        <textarea class="form-textarea" placeholder="添加备注说明..."></textarea>
+      </div>
+
+      <button class="btn-submit">保存账单</button>
+    </div>
+  </main>
+</body>
+</html>

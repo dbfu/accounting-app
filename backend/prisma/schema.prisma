@@ -1,0 +1,78 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  email     String   @unique
+  password  String
+  avatar    String?
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  categories  Category[]
+  records     Record[]
+  budgets     Budget[]
+
+  @@map("users")
+}
+
+model Category {
+  id        String   @id @default(uuid())
+  name      String
+  type      String   // 'income' or 'expense'
+  icon      String?
+  color     String?
+  sortOrder Int      @default(0) @map("sort_order")
+  userId    String?  @map("user_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user     User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  records  Record[]
+
+  @@index([userId])
+  @@index([type])
+  @@map("categories")
+}
+
+model Record {
+  id          String   @id @default(uuid())
+  type        String   // 'income' or 'expense'
+  amount      Decimal  @db.Decimal(12, 2)
+  description String?
+  recordDate  DateTime @map("record_date")
+  userId      String   @map("user_id")
+  categoryId  String   @map("category_id")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category  Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([categoryId])
+  @@index([recordDate])
+  @@index([userId, recordDate])
+  @@map("records")
+}
+
+model Budget {
+  id        String   @id @default(uuid())
+  amount    Decimal  @db.Decimal(12, 2)
+  month     String   // format: YYYY-MM
+  userId    String   @map("user_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, month])
+  @@map("budgets")
+}

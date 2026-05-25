@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>记账应用 - 数据统计</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8faf9;
+      min-height: 100vh;
+    }
+    .navbar {
+      background: #ffffff;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+    .nav-logo-text { font-size: 18px; font-weight: 700; color: #1a1a1a; }
+    .sidebar {
+      position: fixed;
+      left: 0; top: 69px; bottom: 0;
+      width: 240px;
+      background: #ffffff;
+      border-right: 1px solid #e5e7eb;
+      padding: 24px 16px;
+    }
+    .sidebar-menu { list-style: none; }
+    .sidebar-item { margin-bottom: 8px; }
+    .sidebar-link {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      color: #6b7280;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .sidebar-link:hover { background: #f0fdf4; color: #22c55e; }
+    .sidebar-link.active { background: linear-gradient(135deg, #22c55e, #16a34a); color: white; }
+    .sidebar-link svg { width: 20px; height: 20px; fill: currentColor; }
+    .main-content { margin-left: 240px; padding: 24px; }
+    .page-header { margin-bottom: 24px; }
+    .page-title { font-size: 24px; font-weight: 600; color: #1a1a1a; }
+    /* 月份选择 */
+    .month-selector {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 24px;
+    }
+    .month-btn {
+      width: 40px; height: 40px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      background: white;
+      transition: all 0.2s;
+    }
+    .month-btn:hover { background: #f3f4f6; }
+    .month-btn svg { width: 20px; height: 20px; fill: #6b7280; }
+    .month-display {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a1a;
+      padding: 8px 20px;
+      background: #f0fdf4;
+      border-radius: 10px;
+    }
+    /* 概览卡片 */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .overview-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .overview-label { font-size: 14px; color: #6b7280; margin-bottom: 8px; }
+    .overview-value { font-size: 32px; font-weight: 700; }
+    .overview-value.income { color: #22c55e; }
+    .overview-value.expense { color: #dc2626; }
+    .overview-value.balance { color: #0284c7; }
+    /* 图表区域 */
+    .charts-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .chart-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .chart-title { font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px; }
+    /* 饼图模拟 */
+    .pie-chart-container {
+      display: flex; align-items: center; gap: 32px;
+    }
+    .pie-chart {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        #f97316 0deg 103deg,
+        #3b82f6 103deg 154deg,
+        #a855f7 154deg 205deg,
+        #ec4899 205deg 246deg,
+        #14b8a6 246deg 287deg,
+        #64748b 287deg 360deg
+      );
+      position: relative;
+    }
+    .pie-chart::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 80px; height: 80px;
+      background: white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .pie-legend { list-style: none; }
+    .legend-item {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 12px;
+    }
+    .legend-color {
+      width: 16px; height: 16px;
+      border-radius: 4px;
+    }
+    .legend-name { font-size: 14px; color: #374151; flex: 1; }
+    .legend-value { font-size: 14px; font-weight: 600; color: #1a1a1a; }
+    .legend-percent { font-size: 13px; color: #6b7280; width: 50px; text-align: right; }
+    /* 折线图模拟 */
+    .line-chart {
+      width: 100%;
+      height: 200px;
+      position: relative;
+    }
+    .line-chart-grid {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex; flex-direction: column;
+    }
+    .grid-line {
+      flex: 1;
+      border-bottom: 1px dashed #e5e7eb;
+      position: relative;
+    }
+    .grid-line::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+      color: #9ca3af;
+      top: -6px;
+    }
+    .line-chart-bars {
+      position: absolute;
+      top: 20px; left: 40px; right: 20px; bottom: 30px;
+      display: flex; align-items: flex-end; gap: 20px;
+    }
+    .bar-group { flex: 1; display: flex; gap: 4px; align-items: flex-end; justify-content: center; }
+    .bar {
+      width: 24px;
+      border-radius: 4px 4px 0 0;
+    }
+    .bar.income { background: #22c55e; }
+    .bar.expense { background: #dc2626; }
+    .bar-label {
+      position: absolute;
+      bottom: -20px;
+      font-size: 12px;
+      color: #6b7280;
+      text-align: center;
+      width: 100%;
+    }
+    .line-months {
+      position: absolute;
+      bottom: 0; left: 40px; right: 20px;
+      display: flex; justify-content: space-between;
+    }
+    .month-label { font-size: 12px; color: #6b7280; }
+    @media (max-width: 1024px) {
+      .overview-grid { grid-template-columns: 1fr; }
+      .charts-section { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .sidebar { left: -240px; }
+      .main-content { margin-left: 0; padding: 16px; }
+      .pie-chart-container { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+      </div>
+      <span class="nav-logo-text">记账本</span>
+    </div>
+  </nav>
+
+  <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <li class="sidebar-item"><a href="dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6z"/></svg><span>首页概览</span></a></li>
+      <li class="sidebar-item"><a href="add-record.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg><span>记账</span></a></li>
+      <li class="sidebar-item"><a href="bills.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/></svg><span>账单列表</span></a></li>
+      <li class="sidebar-item"><a href="categories.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M12 2l-5.5 9h11L12 2z"/></svg><span>分类管理</span></a></li>
+      <li class="sidebar-item"><a href="statistics.html" class="sidebar-link active"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg><span>数据统计</span></a></li>
+      <li class="sidebar-item"><a href="budget.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15z"/></svg><span>预算管理</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1 class="page-title">数据统计</h1>
+    </div>
+
+    <!-- 月份选择 -->
+    <div class="month-selector">
+      <button class="month-btn">
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L11.83 12z"/></svg>
+      </button>
+      <span class="month-display">2026年5月</span>
+      <button class="month-btn">
+        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+    </div>
+
+    <!-- 概览卡片 -->
+    <section class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-label">本月收入</div>
+        <div class="overview-value income">¥12,580</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-label">本月支出</div>
+        <div class="overview-value expense">¥3,856</div>
+      </div>
+      <div class="overview-card">
+        <div class="overview-label">本月结余</div>
+        <div class="overview-value balance">¥8,724</div>
+      </div>
+    </section>
+
+    <!-- 图表区域 -->
+    <section class="charts-section">
+      <!-- 分类占比饼图 -->
+      <div class="chart-card">
+        <h3 class="chart-title">支出分类占比</h3>
+        <div class="pie-chart-container">
+          <div class="pie-chart"></div>
+          <ul class="pie-legend">
+            <li class="legend-item">
+              <div class="legend-color" style="background: #f97316;"></div>
+              <span class="legend-name">餐饮</span>
+              <span class="legend-value">¥1,200</span>
+              <span class="legend-percent">31%</span>
+            </li>
+            <li class="legend-item">
+              <div class="legend-color" style="background: #3b82f6;"></div>
+              <span class="legend-name">交通</span>
+              <span class="legend-value">¥500</span>
+              <span class="legend-percent">14%</span>
+            </li>
+            <li class="legend-item">
+              <div class="legend-color" style="background: #a855f7;"></div>
+              <span class="legend-name">购物</span>
+              <span class="legend-value">¥680</span>
+              <span class="legend-percent">18%</span>
+            </li>
+            <li class="legend-item">
+              <div class="legend-color" style="background: #ec4899;"></div>
+              <span class="legend-name">娱乐</span>
+              <span class="legend-value">¥420</span>
+              <span class="legend-percent">11%</span>
+            </li>
+            <li class="legend-item">
+              <div class="legend-color" style="background: #14b8a6;"></div>
+              <span class="legend-name">居住</span>
+              <span class="legend-value">¥800</span>
+              <span class="legend-percent">21%</span>
+            </li>
+            <li class="legend-item">
+              <div class="legend-color" style="background: #64748b;"></div>
+              <span class="legend-name">其他</span>
+              <span class="legend-value">¥256</span>
+              <span class="legend-percent">5%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 收支趋势折线图 -->
+      <div class="chart-card">
+        <h3 class="chart-title">近6月收支趋势</h3>
+        <div class="line-chart">
+          <div class="line-chart-bars">
+            <div class="bar-group" style="position: relative;">
+              <div class="bar income" style="height: 120px;"></div>
+              <div class="bar expense" style="height: 40px;"></div>
+              <span class="bar-label">12月</span>
+            </div>
+            <div class="bar-group" style="position: relative;">
+              <div class="bar income" style="height: 100px;"></div>
+              <div class="bar expense" style="height: 50px;"></div>
+              <span class="bar-label">1月</span>
+            </div>
+            <div class="bar-group" style="position: relative;">
+              <div class="bar income" style="height: 90px;"></div>
+              <div class="bar expense" style="height: 45px;"></div>
+              <span class="bar-label">2月</span>
+            </div>
+            <div class="bar-group" style="position: relative;">
+              <div class="bar income" style="height: 110px;"></div>
+              <div class="bar expense" style="height: 55px;"></div>
+              <span class="bar-label">3月</span>
+            </div>
+            <div class="bar-group" style="position: relative;">
+              <div class="bar income" style="height: 130px;"></div>
+              <div class="bar expense" style="height: 48px;"></div>
+              <span class="bar-label">4月</span>
+            </div>
+            <div class="bar-group" style="position: relative;">
+              <div class="bar income" style="height: 140px;"></div>
+              <div class="bar expense" style="height: 42px;"></div>
+              <span class="bar-label">5月</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

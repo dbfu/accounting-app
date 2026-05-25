@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>记账应用 - 账单列表</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8faf9;
+      min-height: 100vh;
+    }
+    .navbar {
+      background: #ffffff;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+    .nav-logo-text { font-size: 18px; font-weight: 700; color: #1a1a1a; }
+    .sidebar {
+      position: fixed;
+      left: 0; top: 69px; bottom: 0;
+      width: 240px;
+      background: #ffffff;
+      border-right: 1px solid #e5e7eb;
+      padding: 24px 16px;
+    }
+    .sidebar-menu { list-style: none; }
+    .sidebar-item { margin-bottom: 8px; }
+    .sidebar-link {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      color: #6b7280;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .sidebar-link:hover { background: #f0fdf4; color: #22c55e; }
+    .sidebar-link.active { background: linear-gradient(135deg, #22c55e, #16a34a); color: white; }
+    .sidebar-link svg { width: 20px; height: 20px; fill: currentColor; }
+    .main-content { margin-left: 240px; padding: 24px; }
+    .page-header {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .page-title { font-size: 24px; font-weight: 600; color: #1a1a1a; }
+    /* 筛选区域 */
+    .filter-section {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+    }
+    .filter-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .filter-group { flex: 1; min-width: 150px; }
+    .filter-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+    .filter-input {
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      font-size: 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .filter-input:focus { border-color: #22c55e; }
+    /* 搜索框 */
+    .search-group { flex: 2; min-width: 200px; }
+    .search-wrapper {
+      display: flex; align-items: center;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 0 12px;
+      transition: border-color 0.2s;
+    }
+    .search-wrapper:focus-within { border-color: #22c55e; }
+    .search-wrapper svg { width: 18px; height: 18px; fill: #9ca3af; }
+    .search-input {
+      flex: 1;
+      height: 40px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      padding-left: 8px;
+    }
+    /* 账单列表 */
+    .bills-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .bills-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid #f3f4f6;
+      display: flex; align-items: center;
+      justify-content: space-between;
+    }
+    .bills-summary { font-size: 14px; color: #6b7280; }
+    .bills-summary strong { color: #1a1a1a; }
+    .bills-list { list-style: none; padding: 0; }
+    /* 日期分组 */
+    .date-group {
+      padding: 12px 24px;
+      background: #f9fafb;
+      font-size: 13px;
+      font-weight: 500;
+      color: #6b7280;
+    }
+    .date-group-summary {
+      font-size: 13px;
+      color: #9ca3af;
+      float: right;
+    }
+    .bill-item {
+      display: flex; align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid #f3f4f6;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .bill-item:hover { background: #f9fafb; }
+    .bill-item:last-child { border-bottom: none; }
+    .bill-category {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-right: 16px;
+    }
+    .bill-category svg { width: 22px; height: 22px; fill: white; }
+    .bill-info { flex: 1; }
+    .bill-name { font-size: 15px; font-weight: 500; color: #1a1a1a; }
+    .bill-time { font-size: 13px; color: #9ca3af; margin-top: 4px; }
+    .bill-amount { font-size: 16px; font-weight: 600; }
+    .bill-amount.expense { color: #dc2626; }
+    .bill-amount.income { color: #22c55e; }
+    .bill-actions {
+      display: flex; gap: 8px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .bill-item:hover .bill-actions { opacity: 1; }
+    .action-btn {
+      width: 32px; height: 32px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      background: white;
+      transition: all 0.2s;
+    }
+    .action-btn:hover { background: #f3f4f6; }
+    .action-btn svg { width: 16px; height: 16px; fill: #6b7280; }
+    .action-btn.delete:hover { border-color: #dc2626; }
+    .action-btn.delete:hover svg { fill: #dc2626; }
+    /* 分页 */
+    .pagination {
+      display: flex; align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 20px;
+    }
+    .page-btn {
+      min-width: 36px; height: 36px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      color: #6b7280;
+      cursor: pointer;
+      background: white;
+      transition: all 0.2s;
+    }
+    .page-btn:hover { background: #f3f4f6; }
+    .page-btn.active {
+      background: #22c55e;
+      color: white;
+      border-color: #22c55e;
+    }
+    @media (max-width: 768px) {
+      .sidebar { left: -240px; }
+      .main-content { margin-left: 0; padding: 16px; }
+      .filter-row { flex-direction: column; }
+      .filter-group { min-width: 100%; }
+      .bill-actions { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.10 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/></svg>
+      </div>
+      <span class="nav-logo-text">记账本</span>
+    </div>
+  </nav>
+
+  <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <li class="sidebar-item"><a href="dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg><span>首页概览</span></a></li>
+      <li class="sidebar-item"><a href="add-record.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg><span>记账</span></a></li>
+      <li class="sidebar-item"><a href="bills.html" class="sidebar-link active"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span>账单列表</span></a></li>
+      <li class="sidebar-item"><a href="categories.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M12 2l-5.5 9h11L12 2zm0 3.84L13.93 9h-3.87L12 5.84z"/></svg><span>分类管理</span></a></li>
+      <li class="sidebar-item"><a href="statistics.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg><span>数据统计</span></a></li>
+      <li class="sidebar-item"><a href="budget.html" class="sidebar-link"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85z"/></svg><span>预算管理</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="page-header">
+      <h1 class="page-title">账单列表</h1>
+    </div>
+
+    <!-- 筛选区域 -->
+    <section class="filter-section">
+      <div class="filter-row">
+        <div class="filter-group">
+          <label class="filter-label">月份</label>
+          <input type="month" class="filter-input" value="2026-05">
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">分类</label>
+          <select class="filter-input">
+            <option>全部分类</option>
+            <option>餐饮</option>
+            <option>交通</option>
+            <option>购物</option>
+            <option>娱乐</option>
+            <option>居住</option>
+            <option>医疗</option>
+            <option>教育</option>
+            <option>其他</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">类型</label>
+          <select class="filter-input">
+            <option>全部</option>
+            <option>支出</option>
+            <option>收入</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label class="filter-label">搜索</label>
+          <div class="search-wrapper">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" class="search-input" placeholder="搜索备注...">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 账单列表 -->
+    <section class="bills-card">
+      <div class="bills-header">
+        <span class="bills-summary">2026年5月 · 共 <strong>45</strong> 条记录</span>
+      </div>
+      <ul class="bills-list">
+        <li class="date-group">
+          2026-05-25
+          <span class="date-group-summary">支出 ¥31.00</span>
+        </li>
+        <li class="bill-item">
+          <div class="bill-category" style="background: #f97316;">
+            <svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7z"/></svg>
+          </div>
+          <div class="bill-info">
+            <div class="bill-name">午餐 - 公司食堂</div>
+            <div class="bill-time">12:30</div>
+          </div>
+          <div class="bill-amount expense">-¥25.00</div>
+          <div class="bill-actions">
+            <button class="action-btn"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></button>
+            <button class="action-btn delete"><svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>
+          </div>
+        </li>
+        <li class="bill-item">
+          <div class="bill-category" style="background: #3b82f6;">
+            <svg viewBox="0 0 24 24"><path d="M12 2c-4 0-8 .5-8 4v9.5C4 15.43 5.57 17 7.5 17L6 18.5v.5h2.23l2-2H14l2 2h2v-.5L16.5 17c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4z"/></svg>
+          </div>
+          <div class="bill-info">
+            <div class="bill-name">地铁通勤</div>
+            <div class="bill-time">08:15</div>
+          </div>
+          <div class="bill-amount expense">-¥6.00</div>
+          <div class="bill-actions">
+            <button class="action-btn"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/></svg></button>
+            <button class="action-btn delete"><svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12z"/></svg></button>
+          </div>
+        </li>
+        <li class="date-group">
+          2026-05-20
+          <span class="date-group-summary">收入 ¥12,580.00</span>
+        </li>
+        <li class="bill-item">
+          <div class="bill-category" style="background: #22c55e;">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85z"/></svg>
+          </div>
+          <div class="bill-info">
+            <div class="bill-name">工资收入</div>
+            <div class="bill-time">10:00</div>
+          </div>
+          <div class="bill-amount income">+¥12,580.00</div>
+          <div class="bill-actions">
+            <button class="action-btn"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/></svg></button>
+            <button class="action-btn delete"><svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12z"/></svg></button>
+          </div>
+        </li>
+        <li class="date-group">
+          2026-05-19
+          <span class="date-group-summary">支出 ¥186.50</span>
+        </li>
+        <li class="bill-item">
+          <div class="bill-category" style="background: #a855f7;">
+            <svg viewBox="0 0 24 24"><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7z"/></svg>
+          </div>
+          <div class="bill-info">
+            <div class="bill-name">购物 - 超市日用品</div>
+            <div class="bill-time">19:30</div>
+          </div>
+          <div class="bill-amount expense">-¥186.50</div>
+          <div class="bill-actions">
+            <button class="action-btn"><svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/></svg></button>
+            <button class="action-btn delete"><svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12z"/></svg></button>
+          </div>
+        </li>
+      </ul>
+      <div class="pagination">
+        <button class="page-btn">1</button>
+        <button class="page-btn active">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn">5</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
