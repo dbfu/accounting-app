@@ -19,8 +19,15 @@ async function bootstrap() {
 
   // CORS配置
   app.enableCors({
-    origin: ['http://localhost:5173', 'http://localhost:80'],
+    origin: [
+      'http://localhost:5173',
+      'http://localhost:80',
+      'http://124.220.65.225:8081',
+      'http://124.220.65.225',
+    ],
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
   })
 
   // API前缀
