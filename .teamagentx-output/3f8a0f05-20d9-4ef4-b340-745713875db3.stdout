@@ -1,0 +1,13 @@
+
+> accounting-frontend@1.0.0 dev /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend
+> vite
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+Port 5175 is in use, trying another one...
+Port 5176 is in use, trying another one...
+
+  VITE v5.1.0  ready in 114 ms
+
+  ➜  Local:   http://localhost:5177/
+  ➜  Network: use --host to expose

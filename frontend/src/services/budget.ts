@@ -14,8 +14,8 @@ export const budgetApi = {
   },
 
   // 获取当前月预算进度
-  getCurrent: async (): Promise<BudgetProgress> => {
-    const response = await api.get<ApiResponse<BudgetProgress>>('/budgets/current')
+  getCurrent: async (): Promise<BudgetProgress | null> => {
+    const response = await api.get<ApiResponse<BudgetProgress | null>>('/budgets/current')
     return response.data.data
   },
 

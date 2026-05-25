@@ -1,0 +1,9 @@
+
+> accounting-backend@1.0.0 start:dev /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend
+> nest start --watch
+
+c[[90m7:18:28 PM[0m] Starting compilation in watch mode...
+
+
+ Error  Maximum call stack size exceeded
+

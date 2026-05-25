@@ -9,3 +9,20 @@ Error: data and salt arguments required
     at AuthController.register (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/src/modules/auth/auth.controller.ts:12:20)
     at /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/@nestjs+core@10.0.0_@nestjs+common@10.0.0_@nestjs+platform-express@10.0.0_reflect-metadata@0.1.13_rxjs@7.8.1/node_modules/@nestjs/core/router/router-execution-context.js:46:28
     at /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/@nestjs+core@10.0.0_@nestjs+common@10.0.0_@nestjs+platform-express@10.0.0_reflect-metadata@0.1.13_rxjs@7.8.1/node_modules/@nestjs/core/router/router-proxy.js:9:17
+/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:117632
+        throw e;
+        ^
+
+RangeError: Maximum call stack size exceeded
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65452:30)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+    at inferFromTypes (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/node_modules/.pnpm/typescript@5.1.3/node_modules/typescript/lib/typescript.js:65459:11)
+
+Node.js v22.21.1

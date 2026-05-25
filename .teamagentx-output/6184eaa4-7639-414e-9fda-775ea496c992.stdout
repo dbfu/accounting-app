@@ -1,0 +1,23 @@
+
+> accounting-frontend@1.0.0 dev /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend
+> vite
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+Port 5175 is in use, trying another one...
+Port 5176 is in use, trying another one...
+
+  VITE v5.1.0  ready in 131 ms
+
+  ➜  Local:   http://localhost:5177/
+  ➜  Network: use --host to expose
+7:35:57 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:35:58 PM [vite] ✨ new dependencies optimized: axios
+7:35:58 PM [vite] ✨ optimized dependencies changed. reloading
+7:36:10 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:36:27 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:36:37 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:36:51 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:37:01 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:37:14 PM [vite] hmr update /src/App.tsx, /src/index.css
+7:37:29 PM [vite] hmr update /src/App.tsx, /src/index.css

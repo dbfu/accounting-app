@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "jsc": {
+    "baseUrl": "/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend",
+    "parser": {
+      "syntax": "typescript",
+      "decorators": true,
+      "dynamicImport": true
+    },
+    "transform": {
+      "decoratorMetadata": true
+    },
+    "target": "es2021",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "keepClassNames": true
+  },
+  "module": {
+    "type": "commonjs"
+  },
+  "sourceMaps": true
+}

@@ -1,0 +1,869 @@
+7:35:41 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:35:41 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+7:35:41 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+7:35:41 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/budget/pages/Budget.tsx". Does the file exist?
+7:35:41 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+7:35:41 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+7:35:41 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/statistics/pages/Statistics.tsx". Does the file exist?
+7:35:41 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:35:41 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:41 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Login.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Checkbox } from "antd";
+  21 |  import { UserOutlined, LockOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  import { useAuthStore } from "../store/authStore";
+  24 |  export default function Login() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:41 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Register.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Progress } from "antd";
+  21 |  import { UserOutlined, LockOutlined, MailOutlined, CheckCircleOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  function checkPasswordStrength(password) {
+  24 |    const hasLetter = /[a-zA-Z]/.test(password);
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:41 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/dashboard/pages/Dashboard.tsx:32:50
+  46 |  } from "@ant-design/icons";
+  47 |  import ReactECharts from "echarts-for-react";
+  48 |  import { recordApi, categoryApi, budgetApi } from "../../services";
+     |                                                     ^
+  49 |  import dayjs from "dayjs";
+  50 |  export default function Dashboard() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:41 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/records/pages/Records.tsx:23:39
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { recordApi, categoryApi } from "../../services";
+     |                                          ^
+  41 |  import dayjs from "dayjs";
+  42 |  export default function Records() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:41 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/categories/pages/Categories.tsx:23:28
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { categoryApi } from "../../services";
+     |                               ^
+  41 |  export default function Categories() {
+  42 |    _s();
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:41 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/statistics/pages/Statistics.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/statistics/pages/Statistics.tsx:6:26
+  21 |  import { PlusCircleOutlined, PayCircleOutlined, WalletOutlined } from "@ant-design/icons";
+  22 |  import ReactECharts from "echarts-for-react";
+  23 |  import { recordApi } from "../../services";
+     |                             ^
+  24 |  import dayjs from "dayjs";
+  25 |  export default function Statistics() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:41 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/budget/pages/Budget.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/budget/pages/Budget.tsx:21:37
+  36 |  } from "antd";
+  37 |  import { DeleteOutlined, WarningOutlined } from "@ant-design/icons";
+  38 |  import { budgetApi, recordApi } from "../../services";
+     |                                        ^
+  39 |  import dayjs from "dayjs";
+  40 |  export default function Budget() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:57 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+7:35:57 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:35:57 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/statistics/pages/Statistics.tsx". Does the file exist?
+7:35:57 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:35:57 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+7:35:57 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+7:35:57 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+7:35:57 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:57 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Login.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Checkbox } from "antd";
+  21 |  import { UserOutlined, LockOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  import { useAuthStore } from "../store/authStore";
+  24 |  export default function Login() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:57 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Register.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Progress } from "antd";
+  21 |  import { UserOutlined, LockOutlined, MailOutlined, CheckCircleOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  function checkPasswordStrength(password) {
+  24 |    const hasLetter = /[a-zA-Z]/.test(password);
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:57 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/dashboard/pages/Dashboard.tsx:32:50
+  46 |  } from "@ant-design/icons";
+  47 |  import ReactECharts from "echarts-for-react";
+  48 |  import { recordApi, categoryApi, budgetApi } from "../../services";
+     |                                                     ^
+  49 |  import dayjs from "dayjs";
+  50 |  export default function Dashboard() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:57 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/categories/pages/Categories.tsx:23:28
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { categoryApi } from "../../services";
+     |                               ^
+  41 |  export default function Categories() {
+  42 |    _s();
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:57 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/records/pages/Records.tsx:23:39
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { recordApi, categoryApi } from "../../services";
+     |                                          ^
+  41 |  import dayjs from "dayjs";
+  42 |  export default function Records() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:57 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/statistics/pages/Statistics.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/statistics/pages/Statistics.tsx:6:26
+  21 |  import { PlusCircleOutlined, PayCircleOutlined, WalletOutlined } from "@ant-design/icons";
+  22 |  import ReactECharts from "echarts-for-react";
+  23 |  import { recordApi } from "../../services";
+     |                             ^
+  24 |  import dayjs from "dayjs";
+  25 |  export default function Statistics() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/statistics/pages/Statistics.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/statistics/pages/Statistics.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+7:35:58 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+7:35:58 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:58 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Login.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Checkbox } from "antd";
+  21 |  import { UserOutlined, LockOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  import { useAuthStore } from "../store/authStore";
+  24 |  export default function Login() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:58 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Register.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Progress } from "antd";
+  21 |  import { UserOutlined, LockOutlined, MailOutlined, CheckCircleOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  function checkPasswordStrength(password) {
+  24 |    const hasLetter = /[a-zA-Z]/.test(password);
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:58 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/dashboard/pages/Dashboard.tsx:32:50
+  46 |  } from "@ant-design/icons";
+  47 |  import ReactECharts from "echarts-for-react";
+  48 |  import { recordApi, categoryApi, budgetApi } from "../../services";
+     |                                                     ^
+  49 |  import dayjs from "dayjs";
+  50 |  export default function Dashboard() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:58 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/records/pages/Records.tsx:23:39
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { recordApi, categoryApi } from "../../services";
+     |                                          ^
+  41 |  import dayjs from "dayjs";
+  42 |  export default function Records() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:58 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/categories/pages/Categories.tsx:23:28
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { categoryApi } from "../../services";
+     |                               ^
+  41 |  export default function Categories() {
+  42 |    _s();
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:35:58 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/statistics/pages/Statistics.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/statistics/pages/Statistics.tsx:6:26
+  21 |  import { PlusCircleOutlined, PayCircleOutlined, WalletOutlined } from "@ant-design/icons";
+  22 |  import ReactECharts from "echarts-for-react";
+  23 |  import { recordApi } from "../../services";
+     |                             ^
+  24 |  import dayjs from "dayjs";
+  25 |  export default function Statistics() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:10 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:36:10 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:36:10 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+7:36:10 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+7:36:10 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+7:36:10 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+7:36:10 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Login.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Checkbox } from "antd";
+  21 |  import { UserOutlined, LockOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  import { useAuthStore } from "../store/authStore";
+  24 |  export default function Login() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:10 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:10 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Register.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Progress } from "antd";
+  21 |  import { UserOutlined, LockOutlined, MailOutlined, CheckCircleOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  function checkPasswordStrength(password) {
+  24 |    const hasLetter = /[a-zA-Z]/.test(password);
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:10 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/dashboard/pages/Dashboard.tsx:32:50
+  46 |  } from "@ant-design/icons";
+  47 |  import ReactECharts from "echarts-for-react";
+  48 |  import { recordApi, categoryApi, budgetApi } from "../../services";
+     |                                                     ^
+  49 |  import dayjs from "dayjs";
+  50 |  export default function Dashboard() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:10 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/records/pages/Records.tsx:23:39
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { recordApi, categoryApi } from "../../services";
+     |                                          ^
+  41 |  import dayjs from "dayjs";
+  42 |  export default function Records() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:10 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/categories/pages/Categories.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/categories/pages/Categories.tsx:23:28
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { categoryApi } from "../../services";
+     |                               ^
+  41 |  export default function Categories() {
+  42 |    _s();
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:27 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:36:27 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+7:36:27 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+7:36:27 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:36:27 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+7:36:27 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:27 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/dashboard/pages/Dashboard.tsx:32:50
+  46 |  } from "@ant-design/icons";
+  47 |  import ReactECharts from "echarts-for-react";
+  48 |  import { recordApi, categoryApi, budgetApi } from "../../services";
+     |                                                     ^
+  49 |  import dayjs from "dayjs";
+  50 |  export default function Dashboard() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:27 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Login.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Checkbox } from "antd";
+  21 |  import { UserOutlined, LockOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  import { useAuthStore } from "../store/authStore";
+  24 |  export default function Login() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:27 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/records/pages/Records.tsx:23:39
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { recordApi, categoryApi } from "../../services";
+     |                                          ^
+  41 |  import dayjs from "dayjs";
+  42 |  export default function Records() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:27 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Register.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Register.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Progress } from "antd";
+  21 |  import { UserOutlined, LockOutlined, MailOutlined, CheckCircleOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  function checkPasswordStrength(password) {
+  24 |    const hasLetter = /[a-zA-Z]/.test(password);
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:37 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:36:37 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:36:37 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+7:36:37 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+7:36:37 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/auth/pages/Login.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/auth/pages/Login.tsx:5:24
+  20 |  import { Form, Input, Button, Card, message, Checkbox } from "antd";
+  21 |  import { UserOutlined, LockOutlined } from "@ant-design/icons";
+  22 |  import { authApi } from "../../services";
+     |                           ^
+  23 |  import { useAuthStore } from "../store/authStore";
+  24 |  export default function Login() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:37 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:37 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/records/pages/Records.tsx:23:39
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { recordApi, categoryApi } from "../../services";
+     |                                          ^
+  41 |  import dayjs from "dayjs";
+  42 |  export default function Records() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:37 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/dashboard/pages/Dashboard.tsx:32:50
+  46 |  } from "@ant-design/icons";
+  47 |  import ReactECharts from "echarts-for-react";
+  48 |  import { recordApi, categoryApi, budgetApi } from "../../services";
+     |                                                     ^
+  49 |  import dayjs from "dayjs";
+  50 |  export default function Dashboard() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:51 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:36:51 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:36:51 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+7:36:51 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:51 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/dashboard/pages/Dashboard.tsx:32:50
+  46 |  } from "@ant-design/icons";
+  47 |  import ReactECharts from "echarts-for-react";
+  48 |  import { recordApi, categoryApi, budgetApi } from "../../services";
+     |                                                     ^
+  49 |  import dayjs from "dayjs";
+  50 |  export default function Dashboard() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:36:51 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/records/pages/Records.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/records/pages/Records.tsx:23:39
+  38 |  } from "antd";
+  39 |  import { PlusOutlined, EditOutlined, DeleteOutlined } from "@ant-design/icons";
+  40 |  import { recordApi, categoryApi } from "../../services";
+     |                                          ^
+  41 |  import dayjs from "dayjs";
+  42 |  export default function Records() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:37:01 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:37:01 PM [vite] Pre-transform error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+7:37:02 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:37:02 PM [vite] Internal server error: Failed to resolve import "../../services" from "src/modules/dashboard/pages/Dashboard.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/modules/dashboard/pages/Dashboard.tsx:32:50
+  46 |  } from "@ant-design/icons";
+  47 |  import ReactECharts from "echarts-for-react";
+  48 |  import { recordApi, categoryApi, budgetApi } from "../../services";
+     |                                                     ^
+  49 |  import dayjs from "dayjs";
+  50 |  export default function Dashboard() {
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+7:37:14 PM [vite] Pre-transform error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+7:37:14 PM [vite] Internal server error: Failed to resolve import "../modules/auth/store/authStore" from "src/components/Layout/index.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/src/components/Layout/index.tsx:15:29
+  28 |  } from "@ant-design/icons";
+  29 |  import { useQuery } from "@tanstack/react-query";
+  30 |  import { useAuthStore } from "../modules/auth/store/authStore";
+     |                                ^
+  31 |  import { authApi, budgetApi } from "../services";
+  32 |  const { Header, Sider, Content } = AntLayout;
+      at formatError (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50509:46)
+      at TransformContext.error (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50503:19)
+      at normalizeUrl (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65560:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65715:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:65636:13)
+      at async Object.transform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:50818:30)
+      at async loadAndTransform (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:53591:29)
+      at async viteTransformMiddleware (file:///Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/frontend/node_modules/.pnpm/vite@5.1.0/node_modules/vite/dist/node/chunks/dep-nGG-_oRu.js:63375:32)
+(node:77467) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)

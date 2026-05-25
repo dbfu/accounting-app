@@ -1,0 +1,17 @@
+Successfully compiled: 35 files with swc (41.37ms)
+
+/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/dist/src/modules/records/dto/query-record.dto.js:101
+    (0, _classvalidator.IsString)(),
+                                 ^
+ReferenceError: MaxLength is not defined
+    at Object.<anonymous> (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/dist/src/modules/records/dto/query-record.dto.js:101:34)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Module.require (node:internal/modules/cjs/loader:1463:12)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/Users/fudebao/.teamagentx/workspace/8dd37b38-7b7b-4e82-b9bd-0f401e285d7e/backend/dist/src/modules/records/dto/index.js:24:25)
+Successfully compiled src/modules/records/dto/query-record.dto.ts with swc (6.75ms)
